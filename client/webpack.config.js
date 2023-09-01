@@ -17,7 +17,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'J.A.T.E'
+        title: 'JAWA'
       }),
       // adds in the service worker
       new InjectManifest({
@@ -28,8 +28,8 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true, 
-        name: 'pwa-text-editor',
-        short_name: 'J.A.T.E',
+        name: 'JATE PWA',
+        short_name: 'JAWA',
         description: 'Just Another Text Editor!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
