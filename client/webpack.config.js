@@ -19,10 +19,12 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E'
       }),
+      // adds in the service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
+      // generates manifest file
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true, 
@@ -45,10 +47,13 @@ module.exports = () => {
 
     module: {
       rules: [
+        // CSS loader rules
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
+
+        // Babel loader rules
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
